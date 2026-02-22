@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const GROQ_MODEL = "llama3-70b-8192";
+const BACKEND = "https://dploy-vercel-tablefind-production.up.railway.app";
 
 const PROMPT_SUGGESTIONS = [
   { icon: "📍", text: "Find restaurants near me", location: "New York, NY", cuisine: "" },
