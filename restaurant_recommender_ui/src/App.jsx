@@ -56,7 +56,10 @@ export default function App() {
     setResult(null);
 
     try {
-      const res = await fetch("/api/recommend", {
+      const BACKEND = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+        ? "http://localhost:8080"
+        : "https://dploy-vercel-tablefind-production.up.railway.app";
+      const res = await fetch(`${BACKEND}/api/recommend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
